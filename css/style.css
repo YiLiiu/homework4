@@ -1,0 +1,97 @@
+*{
+    font-family:'Poppins', sans-serif;
+}
+
+header, .nav_links, .pricing, .gallery {
+    display: flex;
+    flex-direction: column;
+}
+header img{
+    width: 100%;
+    height: auto;
+}
+.nav_links {
+    align-items: center;
+    z-index: 2;
+}
+.card{
+    width: 100%;
+    z-index: 3;
+}
+img {
+    width: 100%;
+    z-index: 4;
+}
+
+#logo { animation: fade 3s; }
+
+@keyframes fade {
+0% {
+    opacity:0;
+}
+100% {
+    opacity:1;
+}
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #logo {
+      animation: none;
+    }
+}
+
+
+@media only screen and (min-width: 700px) {
+    header img{
+        width: 400px;
+        height: auto;
+        justify-content: flex-start;
+    }
+
+    header{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav_links{
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .pricing{
+        justify-content: center;
+        flex-flow: row wrap;
+    }
+
+    .gallery{
+        justify-content: space-around;
+        flex-flow: row wrap;
+    }
+
+    .card{
+        width: 300px;
+        justify-content: space-between;
+    }
+
+    img{
+        width: 300px;
+        justify-content: space-between;
+    }
+
+    #logo { animation: fade 3s; }
+
+    @keyframes fade {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        #logo {
+          animation: none;
+        }
+    }
+}
